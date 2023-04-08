@@ -1,0 +1,38 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(rel='stylesheet' href='../static/style.css')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+link(href='https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap' rel='stylesheet')
+.sun
+  img(src='../static/Sun - 1181x1181.png' alt='')
+.heading
+  h1 Self Help Chatbot
+.container
+  .conv
+    img#img(src='../static/d3.png' alt='float')
+  .chatbox
+    #flex_box_chats
+     
+      //- .left_no_color
+      //-   .lds-ellipsis
+      //-     div
+      //-     div
+      //-     div
+      //-     div
+      //- .left_no_color
+      //-   .lds-ellipsis
+      //-     div
+      //-     div
+      //-     div
+      //-     div
+    form#send_container(action='/' method='post')
+      span
+        input#messageinp(type='text' placeholder='Type anything you want to say ........' name="prompt")
+      button(type='submit')  send
+ 
+script(src='../static/script.js')
