@@ -14,7 +14,7 @@ import time
 #     engine.say(audio)
 #     engine.runAndWait()
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 prompt=sys.argv[1]
 
