@@ -44,28 +44,30 @@ form.addEventListener("submit",(e)=>{
     element.scrollTop = element.scrollHeight;
 
     var i = setInterval(() => {
-        fetch("../static/bool.txt")
+        fetch("../static/bool.json")
         .then(function(response){
              return response.text();
         })
         .then(function(data){
-            a=data;
-            console.log(a);
+            var obj =JSON.parse(data)
+            a=obj.message
             
         
         })
        
         
             if(a=="t"){
-                fetch("../static/output.txt")
+                fetch("../static/output.json")
                 .then(function(response){
                      return response.text();
                 })
                 .then(function(data){
                     console.log(data);
                     // loader.style.display = "none";
+                    obj2=JSON.parse(data)
+                    b=obj2.value
 
-                    append(data,"left");
+                    append(b,"left");
                     
                     document.getElementById(`newid${count}`).style.display="none";
                     console.log(count);
