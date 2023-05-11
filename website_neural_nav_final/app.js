@@ -26,19 +26,23 @@ app.post('/', function (req, res) {
     console.log(req.body);
 
     const data_to_pass_in = req.body.prompt;
-    fs.writeFileSync('static/output.txt', "")
-    fs.writeFileSync('static/bool.txt', "f")
+    fs.writeFileSync('static/output.json', '{"value":"work"}')
+    fs.writeFileSync('static/bool.json', '{"message":"f"}')
 
     const python_process=spawner("python",["python.py",(data_to_pass_in)]);
 python_process.stdout.on("data",(data) =>{
-    fs.writeFileSync('static/bool.txt', "f")
+    fs.writeFileSync('static/bool.json', '{"message":"f"}')
     console.log(data.toString());
-    fs.writeFileSync('static/output.txt', "")
-    fs.writeFileSync("static/output.txt", data.toString())
+    fs.writeFileSync('static/output.json', '{"value":""}')
+    var obj= {
+        value : data.toString()
 
-    fs.writeFileSync('static/bool.txt', "t")
+    }
+    fs.writeFileSync("static/output.json", JSON.stringify(obj))
+
+    fs.writeFileSync('static/bool.json', '{"message":"t"}')
     setTimeout(() => {
-        fs.writeFileSync('static/bool.txt', "f")
+        fs.writeFileSync('static/bool.json', '{"message":"f"}')
 
         
     }, 700);
