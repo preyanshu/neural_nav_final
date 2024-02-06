@@ -33,7 +33,7 @@ Implementation - Website: For frontend we have used html,css and java script in 
 		     also integrated with javascript we have used open ai api and their most advanced model of the chat bot in the backend we
 		     have trained the model with our own prompts to act properly as a self help bot.
 
-		     Android Application: We have created a user friendly app using android studio as front-end where we used java class and 
+Android Application: We have created a user friendly app using android studio as front-end where we used java class and 
 		     integrated python on back-end using chaquopy interface which takes the input by the user and returns the output via our
 		     self help bot and displays it on our app.
 
